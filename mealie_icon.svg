@@ -1,0 +1,19 @@
+<svg width="100%" height="100%" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Flat web version of MealieMobile/AppIcon.icon: plate, fork and knife on the warm orange gradient. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="0.7">
+      <stop offset="0" stop-color="#F4A456" />
+      <stop offset="1" stop-color="#E2832C" />
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="230" fill="url(#bg)" />
+  <g fill="#FFFFFF">
+    <rect x="113" y="262" width="22" height="150" rx="11" />
+    <rect x="149" y="262" width="22" height="150" rx="11" />
+    <rect x="185" y="262" width="22" height="150" rx="11" />
+    <path d="M113,386 L207,386 L207,410 C207,446 190,462 186,490 L186,738 A26,26 0 0 1 134,738 L134,490 C130,462 113,446 113,410 Z" />
+    <path d="M909,736 L909,292 C909,272 897,259 880,263 C846,272 817,340 817,432 C817,482 828,512 853,534 L853,736 A28,28 0 0 0 909,736 Z" />
+    <path fill-rule="evenodd" d="M512,227 A285,285 0 1 1 511.99,227 Z M512,302 A210,210 0 1 0 512.01,302 Z" />
+  </g>
+  <circle cx="512" cy="512" r="198" fill="#F6E7D6" />
+</svg>

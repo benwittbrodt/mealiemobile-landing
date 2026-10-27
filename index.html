@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mealie Mobile — Your Mealie Server, Native on iPhone</title>
+  <meta name="description"
+    content="A native iPhone and iPad app for your self-hosted Mealie server. Browse recipes, cook step by step, plan the week, and shop with a grocery list that syncs two ways with Apple Reminders." />
+  <link rel="icon" href="mealie_icon.svg" type="image/svg+xml" />
+  <link rel="icon" href="ios_icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="ios_icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="logo" href="#">
+        <img src="mealie_icon.svg" alt="" />
+        <span>Mealie Mobile</span>
+      </a>
+      <div class="nav-links">
+        <a href="#recipes">Recipes</a>
+        <a href="#cook">Cook</a>
+        <a href="#plan">Plan</a>
+        <a href="#groceries">Groceries</a>
+        <a href="#reminders">Reminders</a>
+      </div>
+      <!-- TODO: replace #download with the App Store URL once the listing is live (all badges on this page) -->
+      <a class="nav-cta" href="#download" aria-label="Download Mealie Mobile on the App Store">
+        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+          alt="Download on the App Store" />
+      </a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Your Mealie,<span class="accent"> in your pocket.</span></h1>
+          <p class="hero-sub">
+            A fast, native iPhone and iPad app for your self-hosted Mealie server. Browse recipes, cook step by step,
+            plan the week, and shop from a list that syncs with Apple Reminders.
+          </p>
+          <div class="hero-actions">
+            <a class="app-store-badge" href="#download" aria-label="Download Mealie Mobile on the App Store">
+              <img
+                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+                alt="Download on the App Store" />
+            </a>
+            <a class="btn-secondary" href="https://mealie.io" target="_blank" rel="noopener">
+              What is Mealie?
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 5h5v5" />
+                <path d="M19 5l-9 9" />
+                <path d="M19 14v5H5V5h5" />
+              </svg>
+            </a>
+          </div>
+          <p class="hero-note">Works with Mealie v2.0 and later. Requires your own Mealie server.</p>
+        </div>
+        <div class="hero-device">
+          <div class="device-frame">
+            <div class="device-screen">
+              <img src="screenshots/recipes.png" alt="Recipe library in Mealie Mobile"
+                onerror="this.style.display='none'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS STRIP -->
+    <section class="metrics">
+      <div class="container metrics-grid">
+        <div class="metric">
+          <div class="metric-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="7" rx="2" />
+              <rect x="3" y="13" width="18" height="7" rx="2" />
+              <path d="M7 7.5h.01M7 16.5h.01" />
+            </svg>
+          </div>
+          <span class="metric-value">Your server</span>
+          <span class="metric-label">Talks only to your Mealie, on the web, your LAN, or a tailnet</span>
+        </div>
+        <div class="metric">
+          <div class="metric-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="6" y="2.5" width="12" height="19" rx="3" />
+              <path d="M10.5 18.5h3" />
+            </svg>
+          </div>
+          <span class="metric-value">Truly native</span>
+          <span class="metric-label">SwiftUI on iPhone and iPad, not a web view</span>
+        </div>
+        <div class="metric">
+          <div class="metric-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M20 11a8 8 0 0 0-14.3-4.9L4 8" />
+              <path d="M4 3.5V8h4.5" />
+              <path d="M4 13a8 8 0 0 0 14.3 4.9L20 16" />
+              <path d="M20 20.5V16h-4.5" />
+            </svg>
+          </div>
+          <span class="metric-value">Reminders sync</span>
+          <span class="metric-label">Two-way, so Siri and Apple Watch work too</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECIPES -->
+    <section id="recipes" class="feature">
+      <div class="container feature-grid">
+        <div class="feature-copy">
+          <div class="eyebrow">Recipes</div>
+          <h2>Your whole recipe box, one tap away.</h2>
+          <p>
+            Browse as a photo grid or a detailed list. Search, sort, and filter by favorites, cookbook, category, tag,
+            or tool, with infinite scroll through even the biggest libraries.
+          </p>
+          <p>
+            Rate, favorite, comment, share, and edit recipes without opening a browser.
+          </p>
+          <div class="feature-callout">
+            <div class="fc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M7 10h10M7 14h10" />
+              </svg>
+            </div>
+            <p><strong>Original, Metric, or US.</strong> Flip every ingredient's units with one toggle. Cups of flour
+              become grams, and tablespoons stay tablespoons.</p>
+          </div>
+        </div>
+        <div class="feature-media">
+          <div class="device-frame">
+            <div class="device-screen">
+              <img src="screenshots/recipe.png" alt="Recipe page with ingredients and unit toggle"
+                onerror="this.style.display='none'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COOK MODE -->
+    <section id="cook" class="feature alt">
+      <div class="container feature-grid reverse">
+        <div class="feature-copy">
+          <div class="eyebrow">Cook Mode</div>
+          <h2>One step at a time, in type you can read across the counter.</h2>
+          <p>
+            Cook mode shows each step large and on its own, along with just the ingredients that step needs.
+          </p>
+          <ul class="feature-list">
+            <li><strong>Timers from the recipe.</strong> "Simmer for 10 minutes" becomes a button, with a
+              notification when it's done.</li>
+            <li><strong>Scale servings</strong> and every quantity follows.</li>
+            <li><strong>Screen stays awake</strong> while you cook.</li>
+            <li><strong>"I Made This"</strong> at the end logs it to the recipe's timeline in Mealie.</li>
+          </ul>
+        </div>
+        <div class="feature-media">
+          <div class="device-frame">
+            <div class="device-screen">
+              <img src="screenshots/cook.png" alt="Cook mode step with timer and step ingredients"
+                onerror="this.style.display='none'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEAL PLAN -->
+    <section id="plan" class="feature">
+      <div class="container feature-grid">
+        <div class="feature-copy">
+          <div class="eyebrow">Meal Planner</div>
+          <h2>Plan the week before you leave the couch.</h2>
+          <p>
+            See the whole week at a glance. Add a recipe or a quick note to any day and meal, or let Mealie pick a
+            random recipe when nobody can decide.
+          </p>
+          <div class="feature-callout">
+            <div class="fc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+            </div>
+            <p><strong>Plan to list in one tap.</strong> Add the whole week's ingredients to your groceries straight
+              from the planner.</p>
+          </div>
+        </div>
+        <div class="feature-media">
+          <div class="device-frame">
+            <div class="device-screen">
+              <img src="screenshots/mealplan.png" alt="Weekly meal plan" onerror="this.style.display='none'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GROCERIES -->
+    <section id="groceries" class="feature alt">
+      <div class="container feature-grid reverse">
+        <div class="feature-copy">
+          <div class="eyebrow">Groceries</div>
+          <h2>A shopping list that knows where everything came from.</h2>
+          <p>
+            Your Mealie shopping list, grouped by aisle label, with each item's source recipe underneath. Check, add,
+            edit, and clear items, across as many lists as your household keeps.
+          </p>
+          <div class="feature-callout">
+            <div class="fc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M5 12l5 5L20 7" />
+              </svg>
+            </div>
+            <p><strong>On Hand pantry.</strong> Mark staples like salt and olive oil as On Hand, and they start
+              unchecked when you add a recipe to groceries, so you only buy what you need.</p>
+          </div>
+        </div>
+        <div class="feature-media">
+          <div class="device-frame">
+            <div class="device-screen">
+              <img src="screenshots/groceries.png" alt="Grocery list grouped by label"
+                onerror="this.style.display='none'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REMINDERS SYNC -->
+    <section id="reminders" class="premium">
+      <div class="container">
+        <div class="sync-visual" role="img"
+          aria-label="Items on the Mealie grocery list mirrored in an Apple Reminders list">
+          <div class="sync-card">
+            <div class="sync-card-head">
+              <img src="mealie_icon.svg" alt="" />
+              <span>Mealie</span>
+            </div>
+            <div class="sync-row done"><span class="tick"></span>2 onions</div>
+            <div class="sync-row"><span class="tick"></span>1 cup heavy cream</div>
+            <div class="sync-row"><span class="tick"></span>8 tortillas</div>
+          </div>
+          <div class="sync-arrows" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M20 11a8 8 0 0 0-14.3-4.9L4 8" />
+              <path d="M4 3.5V8h4.5" />
+              <path d="M4 13a8 8 0 0 0 14.3 4.9L20 16" />
+              <path d="M20 20.5V16h-4.5" />
+            </svg>
+            <span>Two-way</span>
+          </div>
+          <div class="sync-card reminders">
+            <div class="sync-card-head">
+              <span class="rem-icon" aria-hidden="true"><i style="--c:#007AFF"></i><i style="--c:#FF3B30"></i><i
+                  style="--c:#FF9500"></i></span>
+              <span>Reminders</span>
+            </div>
+            <div class="sync-row done"><span class="tick"></span>2 onions</div>
+            <div class="sync-row"><span class="tick"></span>1 cup heavy cream</div>
+            <div class="sync-row"><span class="tick"></span>8 tortillas</div>
+          </div>
+        </div>
+        <div class="eyebrow">Apple Reminders Sync</div>
+        <h2>Shop from Reminders. Siri, Apple Watch, and your family's phones included.</h2>
+        <p>
+          Pair your Mealie list with a Reminders list and changes flow both ways: check off milk on your Watch, ask Siri
+          to add eggs, or let someone at home add to the list from the Reminders app. Set the list type to Groceries
+          and Reminders sorts everything into aisles for you.
+        </p>
+        <div class="fact-grid">
+          <div class="fact">
+            <h3>Edits don't fight</h3>
+            <p>A three-way merge tracks what changed on each side since the last sync, so edits never ping-pong and
+              the newer change wins.</p>
+          </div>
+          <div class="fact">
+            <h3>Pairings that stick</h3>
+            <p>Every reminder carries a link to its Mealie item, so pairs survive reinstalls, iCloud resets, and
+              several phones syncing the same list.</p>
+          </div>
+          <div class="fact">
+            <h3>A safety brake</h3>
+            <p>If a lot of items vanish from one side at once, sync pauses and asks before deleting anything on the
+              other.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADD RECIPES -->
+    <section id="import" class="feature">
+      <div class="container feature-grid">
+        <div class="feature-copy">
+          <div class="eyebrow">Add Recipes</div>
+          <h2>Save a recipe from <span class="accent">anywhere</span>.</h2>
+          <p>
+            Paste a link and Mealie's scraper does the rest. Snap a photo of a cookbook page or paste text for Mealie's
+            AI import, or write one from scratch with sections, notes, tags, and categories.
+          </p>
+          <p>
+            Parse Ingredients runs Mealie's parser so every ingredient is linked to a food, ready for unit conversion
+            and On Hand.
+          </p>
+          <div class="feature-callout">
+            <div class="fc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 15V4M8 8l4-4 4 4" />
+                <path d="M5 13v6h14v-6" />
+              </svg>
+            </div>
+            <p><strong>Save to Mealie.</strong> Tap Share in Safari or any app and send a recipe straight to your
+              server, without opening Mealie Mobile.</p>
+          </div>
+        </div>
+        <div class="feature-media">
+          <div class="device-frame">
+            <div class="device-screen">
+              <img src="screenshots/import.png" alt="New recipe sheet with link, photo, text and manual import"
+                onerror="this.style.display='none'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MORE -->
+    <section class="more feature alt">
+      <div class="container">
+        <div class="more-head">
+          <div class="eyebrow">And More</div>
+          <h2>Built for how you actually cook.</h2>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="2.5" />
+                <path d="M10 4v16" />
+              </svg>
+            </div>
+            <h3>Made for iPad</h3>
+            <p>Ingredients stay pinned in one column while you work through the steps in the other. The meal plan
+              becomes a week grid, and Split View just works.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="9" y="3" width="6" height="11" rx="3" />
+                <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
+              </svg>
+            </div>
+            <h3>Siri &amp; Shortcuts</h3>
+            <p>"Add to groceries in Mealie" and "Sync groceries" work from Siri, the Shortcuts app, and your
+              automations.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="4" y="10" width="16" height="11" rx="2.5" />
+                <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+              </svg>
+            </div>
+            <h3>Sign in once</h3>
+            <p>Your password is used once to create a Mealie API token, which is kept in the Keychain. Or paste a token
+              you already have.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M12 3v3M12 18v3M3 12h3M18 12h3" />
+              </svg>
+            </div>
+            <h3>Home-lab friendly</h3>
+            <p>Plain-HTTP servers on your LAN or a tailnet are fine, e.g. <code>http://192.168.1.20:9000</code>. No
+              reverse proxy required.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 6h16M4 12h10M4 18h7" />
+                <path d="M17 15l2 2 3-4" />
+              </svg>
+            </div>
+            <h3>Quick actions</h3>
+            <p>Long-press a recipe, or swipe a row, to favorite it, add it to the meal plan, or share it.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z" />
+              </svg>
+            </div>
+            <h3>No tracking</h3>
+            <p>No account with us, no analytics, no ads. The app talks to your Mealie server and nothing else. <a
+                href="privacy.html" style="color:var(--accent-text)">Read the privacy policy</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="download" class="cta">
+      <div class="container">
+        <h2>Bring your Mealie <span class="accent">into the kitchen</span>.</h2>
+        <p>Download Mealie Mobile and connect it to your server in under a minute.</p>
+        <div class="cta-actions">
+          <a class="app-store-badge" href="#download" aria-label="Download Mealie Mobile on the App Store">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+              alt="Download on the App Store" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="mealie_icon.svg" alt="" />
+        <span>Mealie Mobile</span>
+      </div>
+      <p>Built by <a href="https://benwittbrodt.com" target="_blank">Ben Wittbrodt</a>, a fellow Mealie self-hoster.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+        <a href="https://mealie.io" target="_blank" rel="noopener">Mealie</a>
+      </div>
+      <p class="footer-legal">Mealie Mobile is an independent app and is not affiliated with or endorsed by the Mealie
+        project. Apple, iPhone, iPad, Siri, and Apple Watch are trademarks of Apple Inc.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

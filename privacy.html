@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Mealie Mobile</title>
+  <meta name="description" content="Mealie Mobile Privacy Policy — how your data is handled." />
+  <link rel="icon" href="mealie_icon.svg" type="image/svg+xml" />
+  <link rel="icon" href="ios_icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="ios_icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">
+        <img src="mealie_icon.svg" alt="" />
+        <span>Mealie Mobile</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+      </div>
+      <a class="nav-cta" href="index.html#download" aria-label="Download Mealie Mobile on the App Store">
+        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+          alt="Download on the App Store" />
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="privacy-wrap">
+      <h1>Privacy Policy</h1>
+      <p class="privacy-meta">Last updated: October 26, 2026</p>
+
+      <p>Mealie Mobile is an iOS and iPadOS app for people who run their own <a href="https://mealie.io"
+          target="_blank" rel="noopener">Mealie</a> recipe server. This policy covers the Mealie Mobile app, its
+        "Save to Mealie" share extension, and this website at <a href="https://mealiemobile.com">mealiemobile.com</a>. The short version: <strong>Mealie Mobile collects no data.
+          The app talks only to the Mealie server you sign in to, and we, the developer, never receive anything you do in
+          it.</strong></p>
+
+      <hr class="privacy-divider" />
+
+      <h2>1. Data We Collect</h2>
+      <p>None. Mealie Mobile has no account with us, no analytics, no crash reporting, no advertising, and no
+        third-party SDKs. We operate no server that the app connects to, so there is nowhere for your data to reach us.
+      </p>
+
+      <h2>2. Your Mealie Server</h2>
+      <p>Everything the app shows and changes (recipes, photos, comments, ratings, meal plans, shopping lists, and On
+        Hand foods) lives on <strong>your own Mealie server</strong>, at the address you enter when you sign in. The
+        app reads and writes that data through Mealie's API, and it is stored and governed by whoever operates that
+        server, which is usually you or your household.</p>
+      <p>Some Mealie features run on your server and may contact other services, depending on how your server is
+        configured:</p>
+      <ul>
+        <li><strong>Importing from a link</strong> asks your Mealie server to fetch and scrape that web page.</li>
+        <li><strong>Importing from photos or text</strong> sends the photos or text to your Mealie server, which passes
+          them to whichever AI provider its administrator has configured. Mealie Mobile does not choose or contact that
+          provider.</li>
+      </ul>
+
+      <h2>3. Sign-in &amp; Credentials</h2>
+      <p>You can sign in with your Mealie username and password, or with an API token you create in Mealie.</p>
+      <ul>
+        <li>If you use a password, it is sent only to your Mealie server, used once to create a long-lived API token
+          named "Mealie Mobile", and then discarded. <strong>Your password is never stored.</strong></li>
+        <li>The API token and your server address are stored on your device in the iOS <strong>Keychain</strong> and in
+          storage shared only with the app's own share extension, so "Save to Mealie" can reach your server.</li>
+        <li>Signing out deletes them from your device and, if the app created the token, revokes it on your server.</li>
+      </ul>
+
+      <h2>4. Reminders</h2>
+      <p>If you turn on Reminders sync, the app asks for access to Reminders so it can keep one list you choose in sync
+        with a Mealie shopping list. It reads and changes only that list. Item names and checked state are copied between
+        Reminders and your Mealie server, and each synced reminder stores a <code>mealiemobile://</code> link in its URL
+        field so the pair can be matched later.</p>
+      <p>Your reminders are stored by Apple on your device and, if you use iCloud, in your iCloud account, under
+        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>. A
+        small record of which reminder is paired with which Mealie item is kept on your device. You can turn sync off
+        at any time, and you can revoke access in iOS Settings.</p>
+
+      <h2>5. Camera &amp; Photos</h2>
+      <p>The app asks for camera access only when you take a photo of a recipe to import. Photos you choose from your
+        library, for importing or as a recipe's picture, use the iOS photo picker, which gives the app only the photos
+        you select. In every case the photo is uploaded to <strong>your Mealie server</strong> and nowhere else.</p>
+
+      <h2>6. Local Network</h2>
+      <p>If your Mealie server is on your home network, iOS asks permission for the app to connect to devices on your
+        local network. It is used only to reach the server address you entered.</p>
+
+      <h2>7. Notifications &amp; Background Refresh</h2>
+      <ul>
+        <li><strong>Cook timers</strong> use local notifications scheduled on your device. Nothing is sent to a push
+          service.</li>
+        <li><strong>Background App Refresh</strong> lets the app sync your grocery list with Reminders while it's
+          closed, by contacting your Mealie server. You can turn it off in iOS Settings.</li>
+      </ul>
+
+      <h2>8. Siri &amp; Shortcuts</h2>
+      <p>The "Add to groceries in Mealie" and "Sync groceries" actions run inside the app and send the item to your
+        Mealie server. Requests you make through Siri are handled by Apple under Apple's privacy policy.</p>
+
+      <h2>9. Share Extension</h2>
+      <p>When you use "Save to Mealie" from the share sheet, the extension reads only the link you shared and sends it
+        to your Mealie server to import. It does not read anything else from the app you shared from.</p>
+
+      <h2>10. Data on Your Device</h2>
+      <p>The app keeps a few settings on your device, such as your display preferences, Reminders sync options, and sync
+        state. Diagnostic logs are written to the device's own system log and are not sent anywhere. Deleting the app
+        removes all of this.</p>
+
+      <h2>11. This Website</h2>
+      <p>This website uses no cookies, analytics, or tracking. It loads fonts from Google Fonts and the App Store
+        badge from Apple, which receive the standard information any web request includes, such as your IP address.</p>
+
+      <h2>12. Data Sharing</h2>
+      <p>We do not sell, rent, or share data with anyone, because we never receive any. The only parties involved in
+        using the app are the operator of your Mealie server and Apple, for Reminders, iCloud, Siri, and the App Store.
+      </p>
+
+      <h2>13. Data Retention &amp; Deletion</h2>
+      <p>Your recipes, plans, and lists are kept on your Mealie server for as long as its operator keeps them. Deleting
+        the app removes the stored token, settings, and sync records from your device. To delete data on your server,
+        use Mealie itself or ask its administrator. We hold no copy of anything to delete.</p>
+
+      <h2>14. Children's Privacy</h2>
+      <p>Mealie Mobile does not knowingly collect information from children under 13. It collects no personal
+        information from users of any age.</p>
+
+      <h2>15. Changes to This Policy</h2>
+      <p>If we update this policy, the revised version will be posted at this URL with a new date. We can't notify
+        you in the app, because we hold no contact information.</p>
+
+      <h2>16. Contact</h2>
+      <p>Questions about this policy? Email <a href="mailto:support@mealiemobile.com">support@mealiemobile.com</a>.</p>
+
+      <hr class="privacy-divider" />
+      <p style="font-size:0.85rem; color: var(--text-3);">Mealie Mobile is an independent app and is not affiliated with
+        or endorsed by the Mealie project. Apple Inc. is not responsible for the content of this privacy policy.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <a class="footer-logo" href="index.html">
+        <img src="mealie_icon.svg" alt="" />
+        <span>Mealie Mobile</span>
+      </a>
+      <p>Built by <a href="https://benwittbrodt.com" target="_blank">Ben Wittbrodt</a>, a fellow Mealie self-hoster.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="https://mealie.io" target="_blank" rel="noopener">Mealie</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
