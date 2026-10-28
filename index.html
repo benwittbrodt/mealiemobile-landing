@@ -47,7 +47,7 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1>Your Mealie,<span class="accent"> in your pocket.</span></h1>
+          <h1>Mealie<span class="accent"> in your pocket.</span></h1>
           <p class="hero-sub">
             A fast, native iPhone and iPad app for your self-hosted Mealie server. Browse recipes, cook step by step,
             plan the week, and shop from a list that syncs with Apple Reminders.
@@ -94,7 +94,7 @@
             </svg>
           </div>
           <span class="metric-value">Your server</span>
-          <span class="metric-label">Talks only to your Mealie, on the web, your LAN, or a tailnet</span>
+          <span class="metric-label">Talks only to your self-hosted Mealie so your data remains yours</span>
         </div>
         <div class="metric">
           <div class="metric-icon" aria-hidden="true">
@@ -105,7 +105,7 @@
             </svg>
           </div>
           <span class="metric-value">Truly native</span>
-          <span class="metric-label">SwiftUI on iPhone and iPad, not a web view</span>
+          <span class="metric-label">SwiftUI on iPhone and iPad. Also compatible with iPhone Duo</span>
         </div>
         <div class="metric">
           <div class="metric-icon" aria-hidden="true">
@@ -127,16 +127,15 @@
     <section id="recipes" class="feature">
       <div class="container feature-grid">
         <div class="feature-copy">
-          <div class="eyebrow">Recipes</div>
-          <h2>Your whole recipe box, one tap away.</h2>
+          <h2>Your whole recipe box.</h2>
           <p>
             Browse as a photo grid or a detailed list. Search, sort, and filter by favorites, cookbook, category, tag,
             or tool, with infinite scroll through even the biggest libraries.
           </p>
           <p>
-            Rate, favorite, comment, share, and edit recipes without opening a browser.
+            Rate, favorite, comment, share, and edit recipes all in the app.
           </p>
-          <div class="feature-callout">
+          <!-- <div class="feature-callout">
             <div class="fc-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
                 stroke-linejoin="round">
@@ -145,7 +144,7 @@
             </div>
             <p><strong>Original, Metric, or US.</strong> Flip every ingredient's units with one toggle. Cups of flour
               become grams, and tablespoons stay tablespoons.</p>
-          </div>
+          </div> -->
         </div>
         <div class="feature-media">
           <div class="device-frame">
@@ -162,8 +161,7 @@
     <section id="cook" class="feature alt">
       <div class="container feature-grid reverse">
         <div class="feature-copy">
-          <div class="eyebrow">Cook Mode</div>
-          <h2>One step at a time, in type you can read across the counter.</h2>
+          <h2><span class="accent">Cook Mode</span> with text you can read across the counter.</h2>
           <p>
             Cook mode shows each step large and on its own, along with just the ingredients that step needs.
           </p>
@@ -190,8 +188,7 @@
     <section id="plan" class="feature">
       <div class="container feature-grid">
         <div class="feature-copy">
-          <div class="eyebrow">Meal Planner</div>
-          <h2>Plan the week before you leave the couch.</h2>
+          <h2>Weekly meal planning <span class="accent">quick and easy.</span></h2>
           <p>
             See the whole week at a glance. Add a recipe or a quick note to any day and meal, or let Mealie pick a
             random recipe when nobody can decide.
@@ -203,8 +200,8 @@
                 <path d="M12 5v14M5 12h14" />
               </svg>
             </div>
-            <p><strong>Plan to list in one tap.</strong> Add the whole week's ingredients to your groceries straight
-              from the planner.</p>
+            <p><strong>Plan to list in one tap.</strong> Add the whole week's ingredients to your groceries with the
+              shopping cart icon.</p>
           </div>
         </div>
         <div class="feature-media">
@@ -221,11 +218,10 @@
     <section id="groceries" class="feature alt">
       <div class="container feature-grid reverse">
         <div class="feature-copy">
-          <div class="eyebrow">Groceries</div>
-          <h2>A shopping list that knows where everything came from.</h2>
+          <h2><span class="accent">iOS native</span> shopping list that auto categorizes.</h2>
           <p>
-            Your Mealie shopping list, grouped by aisle label, with each item's source recipe underneath. Check, add,
-            edit, and clear items, across as many lists as your household keeps.
+            If you have foods on Mealie categorized (using the seed dataset) MealieMobile will categorize them in the
+            grocery list. If you utilize the new iOS Grocery list in reminders the categorization is automatic.
           </p>
           <div class="feature-callout">
             <div class="fc-icon" aria-hidden="true">
@@ -284,8 +280,7 @@
             <div class="sync-row"><span class="tick"></span>8 tortillas</div>
           </div>
         </div>
-        <div class="eyebrow">Apple Reminders Sync</div>
-        <h2>Shop from Reminders. Siri, Apple Watch, and your family's phones included.</h2>
+        <h2>Shop from Reminders. Siri, Apple Watch, or any Apple Device.</h2>
         <p>
           Pair your Mealie list with a Reminders list and changes flow both ways: check off milk on your Watch, ask Siri
           to add eggs, or let someone at home add to the list from the Reminders app. Set the list type to Groceries
@@ -293,7 +288,7 @@
         </p>
         <div class="fact-grid">
           <div class="fact">
-            <h3>Edits don't fight</h3>
+            <h3>Everyone's changes merge</h3>
             <p>A three-way merge tracks what changed on each side since the last sync, so edits never ping-pong and
               the newer change wins.</p>
           </div>
@@ -303,7 +298,7 @@
               several phones syncing the same list.</p>
           </div>
           <div class="fact">
-            <h3>A safety brake</h3>
+            <h3>Safely handles changes</h3>
             <p>If a lot of items vanish from one side at once, sync pauses and asks before deleting anything on the
               other.</p>
           </div>
@@ -315,7 +310,6 @@
     <section id="import" class="feature">
       <div class="container feature-grid">
         <div class="feature-copy">
-          <div class="eyebrow">Add Recipes</div>
           <h2>Save a recipe from <span class="accent">anywhere</span>.</h2>
           <p>
             Paste a link and Mealie's scraper does the rest. Snap a photo of a cookbook page or paste text for Mealie's
@@ -401,8 +395,9 @@
               </svg>
             </div>
             <h3>Home-lab friendly</h3>
-            <p>Plain-HTTP servers on your LAN or a tailnet are fine, e.g. <code>http://192.168.1.20:9000</code>. No
-              reverse proxy required.</p>
+            <p>Plain-HTTP servers on your LAN are fine, e.g. <code>http://192.168.1.20:9000</code>. No
+              reverse proxy required. Or structure anything between your Mealie instance and the web. Just works how you
+              do.</p>
           </div>
           <div class="card">
             <div class="card-icon" aria-hidden="true">
@@ -433,7 +428,7 @@
     <!-- CTA -->
     <section id="download" class="cta">
       <div class="container">
-        <h2>Bring your Mealie <span class="accent">into the kitchen</span>.</h2>
+        <h2>Bring your Mealie <span class="accent">everywhere</span>.</h2>
         <p>Download Mealie Mobile and connect it to your server in under a minute.</p>
         <div class="cta-actions">
           <a class="app-store-badge" href="#download" aria-label="Download Mealie Mobile on the App Store">
